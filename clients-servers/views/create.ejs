@@ -1,36 +1,23 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My NodeJS Blog | <%= title %></title>
-  </head>
+  <%- include("./partials/head.ejs") %> 
   <body>
-    <nav>
-      <div class="site-title">
-        <a href="/"><h1>Andrei's Blog</h1></a>
-        <p>Site by me</p>
-      </div>
-      <ul>
-        <li><a href="/">Blogs</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blogs/create">New blog</a></li>
-      </ul>
+    <%- include("./partials/nav.ejs") %> 
 
-      <div class="create-blog content">
-        <form>
-          <label for="title">Blog title:</label>
-          <input type="text" id="title" required>
+    <div class="create-blog content">
+      <form>
+        <label for="title">Blog title:</label>
+        <input type="text" id="title" required>
 
-          <label for="subtitle">Blog subtitle:</label>
-          <input type="text" id="subtitle" required>
+        <label for="subtitle">Blog subtitle:</label>
+        <input type="text" id="subtitle" required>
 
-          <label for="body">Blog body:</label>
-          <input type="text" id="body" required>
+        <label for="body">Blog body:</label>
+        <input type="text" id="body" required>
 
-          <button>Submit</button>
-        </form>
-      </div>
-    </nav>
+        <button>Submit</button>
+      </form>
+    </div>
+
+    <%- include("./partials/footer.ejs") %>
   </body>
 </html>
